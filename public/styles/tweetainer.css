@@ -1,0 +1,42 @@
+#tweetainer .tweets {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: snow;
+}
+
+#tweetainer header {
+  height: 5em;
+  padding: 0.5em;
+  background-color: whitesmoke;
+}
+
+#tweetainer .tweets h2 {
+  display: inline;
+  vertical-align: top;
+  padding-left: 0.2em;
+}
+
+#tweetainer .tweets span {
+  float: right;
+  line-height: 1.5em;
+}
+
+#tweetainer .tweets .avatar {
+  height: 4em;
+  width: auto;
+  border-radius: 0.3em;
+}
+
+#tweetainer .tweets p {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#tweetainer .tweets footer {
+  padding: 0.5em;
+  height: 2.5em;
+  border-top: 1px solid lightgrey;
+}
