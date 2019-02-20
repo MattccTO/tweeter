@@ -33,13 +33,19 @@ $(document).ready(() => {
 
 
   // const $submitTweet = $('#submitTweet');
-  const $newTweet = $('#newTweet');
+  const $postTweet = $('#postTweet');
+  const $tweetText = $('textarea');
 
-  $newTweet.submit(function (ev) {
+  $postTweet.submit(function (ev) {
     ev.preventDefault();
-    // console.log($newTweet);
-    // console.log(ev);
-    $.post('/tweets', $newTweet.serialize());
+    if ($tweetText.val() === '' || $tweetText.val() === null) {
+      alert('Blank tweets are not accepted');
+    } else if ($tweetText.val().length > 140) {
+      alert('Too many characters! Please refactor to 140 or less.');
+    } else {
+      $.post('/tweets', $postTweet.serialize());
+      $tweetText.val('');
+    }
   });
 
   function loadTweets() {
