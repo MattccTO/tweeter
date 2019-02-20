@@ -4,35 +4,44 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(() => {
+  function escape(str) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   function getTweetElement(rawTweet) {
-    let tweet = `<article class="tweet">
-          <header>
-            <img class="avatar" src='${rawTweet.user.avatars.regular}'/>
-            <h2>${rawTweet.user.name}</h2>
-            <span class="handle">${rawTweet.user.handle}</span>
-          </header>
-          <p>${rawTweet.content.text}</p>
-          <footer>
-            ${rawTweet.created_at}
-            <div class="icons">
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-heart"></i>
-            </div>
-          </footer>
-        </article>`;
+    const date = new Date;
+    const tweet = `<article class="tweet">
+      <header>
+        <img class="avatar" src='${escape(rawTweet.user.avatars.regular)}'/>
+        <h2>${rawTweet.user.name}</h2>
+        <span class="handle">${escape(rawTweet.user.handle)}</span>
+      </header>
+      <p>${escape(rawTweet.content.text)}</p>
+      <footer>
+        ${date.toDateString(rawTweet.created_at)}
+        <div class="icons">
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </div>
+      </footer>
+      </article>`;
     return tweet;
   }
 
   function renderTweets(tweetArray) {
+    $('#tweetainer').empty();
     tweetArray.forEach((singleTweet) => {
       const tweet = getTweetElement(singleTweet);
-      $('#tweetainer').append(tweet);
+      $('#tweetainer').prepend(tweet);
     });
   }
 
 
   // const $submitTweet = $('#submitTweet');
+
   const $postTweet = $('#postTweet');
   const $tweetText = $('textarea');
 
@@ -43,7 +52,8 @@ $(document).ready(() => {
     } else if ($tweetText.val().length > 140) {
       alert('Too many characters! Please refactor to 140 or less.');
     } else {
-      $.post('/tweets', $postTweet.serialize());
+      $.post('/tweets', $postTweet.serialize())
+        .done(loadTweets);
       $tweetText.val('');
     }
   });
