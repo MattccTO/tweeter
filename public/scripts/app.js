@@ -51,7 +51,7 @@ $(document).ready(() => {
   }];
 
   function getTweetElement(rawTweet) {
-    let $tweet = $(`<article class="tweet">
+    let tweet = `<article class="tweet">
           <header>
             <img class="avatar" src='${rawTweet.user.avatars.regular}'/>
             <h2>${rawTweet.user.name}</h2>
@@ -66,17 +66,16 @@ $(document).ready(() => {
               <i class="fas fa-heart"></i>
             </div>
           </footer>
-        </article>`);
-    return $tweet;
+        </article>`;
+    return tweet;
   }
 
   function renderTweets(tweetArray) {
     tweetArray.forEach((singleTweet) => {
-      const $tweet = getTweetElement(singleTweet);
-      $('#tweetainer').append($tweet);
-    })
+      const tweet = getTweetElement(singleTweet);
+      $('#tweetainer').append(tweet);
+    });
   }
 
   renderTweets(tweetData);
 });
-
