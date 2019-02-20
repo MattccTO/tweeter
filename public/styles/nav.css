@@ -22,3 +22,24 @@
   font-size: 2em;
   line-height: 80px;
 }
+
+#nav-bar .buttons {
+  float: right;
+  height: 80px;
+}
+
+#nav-bar .buttons button {
+  background-color: #e8fdff;
+  height: 60px;
+  width: 150px;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid black;
+  color: #00a087;
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+
+#nav-bar .buttons button:hover {
+  opacity: 1;
+}
