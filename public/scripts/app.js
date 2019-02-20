@@ -70,7 +70,13 @@ $(document).ready(() => {
     return $tweet;
   }
 
-  const $tweet = getTweetElement(tweetData[0]);
-  console.log($tweet); // to see what it looks like
-  $('#tweetainer').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  function renderTweets(tweetArray) {
+    tweetArray.forEach((singleTweet) => {
+      const $tweet = getTweetElement(singleTweet);
+      $('#tweetainer').append($tweet);
+    })
+  }
+
+  renderTweets(tweetData);
 });
+
