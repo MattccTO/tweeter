@@ -1,6 +1,6 @@
 $(document).ready(() => {
   $('.composeButton').click(function () {
-    $('.new-tweet').slideToggle(1000, function () {
+    $('.new-tweet').slideToggle(400, function () {
       $('textarea').focus();
     });
   });

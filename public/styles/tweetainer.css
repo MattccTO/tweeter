@@ -41,6 +41,7 @@
 
 .tweet p {
   padding: 0.5em 1em;
+  word-wrap: break-word;
 }
 
 .tweet footer {
