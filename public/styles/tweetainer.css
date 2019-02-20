@@ -1,15 +1,15 @@
-#tweetainer .tweets {
+.tweet {
   border: 1px solid lightgrey;
   border-radius: 5px;
   margin-top: 5px;
   background-color: snow;
 }
 
-#tweetainer .tweets:hover {
+.tweet:hover {
   border: 1px solid darkgray;
 }
 
-#tweetainer .tweets header {
+.tweet header {
   height: 5em;
   padding: 0.5em;
   background-color: whitesmoke;
@@ -18,50 +18,46 @@
   border-top-right-radius: 5px;
 }
 
-#tweetainer .tweets:hover header {
+.tweet:hover header {
   opacity: 1;
 }
 
-#tweetainer .tweets h2 {
+.tweet h2 {
   display: inline;
   vertical-align: top;
   padding-left: 0.2em;
 }
 
-#tweetainer .tweets span {
+.tweet span {
   float: right;
   line-height: 1.5em;
 }
 
-#tweetainer .tweets .avatar {
+.tweet .avatar {
   height: 4em;
   width: auto;
   border-radius: 0.3em;
 }
 
-#tweetainer .tweets p {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 1em;
-  padding-right: 1em;
+.tweet p {
+  padding: 0.5em 1em;
 }
 
-#tweetainer .tweets footer {
+.tweet footer {
   padding: 0.5em;
   border-top: 1px solid lightgrey;
 }
 
-#tweetainer .tweets .icons {
+.tweet .icons {
   display: none;
   float: right;
 }
 
-#tweetainer .tweets .icons i {
-  padding-left: 2.5px;
-  padding-right: 2.5px;
+.tweet .icons i {
+  padding: 0 2.5px;
   color: cornflowerblue;
 }
 
-#tweetainer .tweets:hover .icons{
+.tweet:hover .icons{
   display: inline;
 }
