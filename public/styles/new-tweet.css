@@ -1,3 +1,15 @@
+.errorMsg {
+  display: none;
+  background-color: lightpink;
+  border-radius:  3px;
+  border: 1px solid red;
+  color: red;
+  text-align: center;
+  margin-bottom: 5px;
+  height: 2em;
+  line-height: 2em;
+}
+
 .new-tweet {
   padding: 0.5em;
   border: 1px solid lightgrey;

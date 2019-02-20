@@ -39,18 +39,20 @@ $(document).ready(() => {
     });
   }
 
-
-  // const $submitTweet = $('#submitTweet');
-
   const $postTweet = $('#postTweet');
   const $tweetText = $('textarea');
 
   $postTweet.submit(function (ev) {
     ev.preventDefault();
+    $('.errorMsg').slideUp(50);
     if ($tweetText.val() === '' || $tweetText.val() === null) {
-      alert('Blank tweets are not accepted');
+      $('.errorMsg').html('Blank tweets are not accepted!');
+      $('.errorMsg').slideDown(400);
+      // alert('Blank tweets are not accepted');
     } else if ($tweetText.val().length > 140) {
-      alert('Too many characters! Please refactor to 140 or less.');
+      $('.errorMsg').html('Too many characters!');
+      $('.errorMsg').slideDown(400);
+      // alert('Too many characters! Please refactor to 140 or less.');
     } else {
       $.post('/tweets', $postTweet.serialize())
         .done(loadTweets);
