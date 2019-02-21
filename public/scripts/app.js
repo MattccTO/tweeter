@@ -77,6 +77,7 @@ $(document).ready(() => {
       $.post('/tweets', $postTweet.serialize())
         .done(loadTweets);
       $tweetText.val('');
+      $('.counter').html(140);
     }
   });
 
