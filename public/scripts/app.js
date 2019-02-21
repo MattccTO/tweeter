@@ -10,8 +10,28 @@ $(document).ready(() => {
     return div.innerHTML;
   }
 
+  function timeStamper(createTime) {
+    const timeDiff = (Date.now() - createTime) / 1000;
+    let timeStamp = 'Posted ';
+    if (timeDiff < 60) {
+      timeStamp += `${timeDiff} seconds ago`;
+    } else if (timeDiff < (3600)) {
+      timeStamp += `${Math.floor(timeDiff / 60)} minutes ago`;
+    } else if (timeDiff < (3600 * 24)) {
+      timeStamp += `${Math.floor(timeDiff / 3600)} hours ago`;
+    } else if (timeDiff < (3600 * 24 * 30.5)) {
+      timeStamp += `${Math.floor(timeDiff / 3600 / 24)} days ago`;
+    } else if (timeDiff < (3600 * 24 * 365)) {
+      timeStamp += `${Math.floor(timeDiff / 3600 / 24 / 30.5)} months ago`;
+    } else {
+      timeStamp += `${Math.floor(timeDiff / 3600 / 24 / 365)} years ago`;
+    }
+    return timeStamp;
+  }
+
+
   function getTweetElement(rawTweet) {
-    const date = new Date;
+    const timeStamp = timeStamper(rawTweet.created_at);
     const tweet = `<article class="tweet">
       <header>
         <img class="avatar" src='${escape(rawTweet.user.avatars.regular)}'/>
@@ -20,7 +40,7 @@ $(document).ready(() => {
       </header>
       <p>${escape(rawTweet.content.text)}</p>
       <footer>
-        ${date.toDateString(rawTweet.created_at)}
+        ${timeStamp}
         <div class="icons">
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
