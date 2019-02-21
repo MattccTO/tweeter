@@ -22,10 +22,14 @@ Tweeter currently takes in posts and assigns them to a randomly generated user.
 
 ## Screenshots
 
+### Screenshot of Tweeter on initial load
 !["Screenshot of Tweeter on initial load"](https://github.com/MattccTO/tweeter/blob/master/docs/Load-Page.png)
 
+### Screenshot of opened compose tweet box
 !["Screenshot of opened compose tweet box"](https://github.com/MattccTO/tweeter/blob/master/docs/Compose-Tweet.png)
 
+### Screenshot of tweet on hover
 !["Screenshot of tweet on hover"](https://github.com/MattccTO/tweeter/blob/master/docs/Tweet-Hover.png)
 
+### Screenshot of error message from data validation
 !["Screenshot of error message from data validation"](https://github.com/MattccTO/tweeter/blob/master/docs/Data-Validation.png)
