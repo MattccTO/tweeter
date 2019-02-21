@@ -25,7 +25,7 @@ function getTweetElement(rawTweet) {
 //  Functions that work with the DOM
 $(document).ready(() => {
   //  Declare used jQuery selectors
-  const $postTweet = $('#postTweet');
+  const $postTweet = $('#post-tweet');
   const $tweetText = $('textarea');
   const $counter = $('.counter');
 

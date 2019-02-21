@@ -1,3 +1,4 @@
+// Change character counter based on input tweet string
 $(document).ready(() => {
   $('textarea').on('input', function () {
     const charCount = this.value.length;

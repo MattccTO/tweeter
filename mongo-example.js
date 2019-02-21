@@ -1,3 +1,5 @@
+//  MondoDB test file -- IGNORE
+
 'use strict';
 
 const { MongoClient } = require('mongodb');
