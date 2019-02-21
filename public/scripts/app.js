@@ -14,7 +14,7 @@ $(document).ready(() => {
     const timeDiff = (Date.now() - createTime) / 1000;
     let timeStamp = 'Posted ';
     if (timeDiff < 60) {
-      timeStamp += `${timeDiff} seconds ago`;
+      timeStamp += `${Math.floor(timeDiff)} seconds ago`;
     } else if (timeDiff < (3600)) {
       timeStamp += `${Math.floor(timeDiff / 60)} minutes ago`;
     } else if (timeDiff < (3600 * 24)) {
