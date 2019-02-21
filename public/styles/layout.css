@@ -25,6 +25,7 @@ body {
 main {
   width: 55%;
   min-width: 500px;
+  max-width: 750px;
   padding-top: 3em;
   padding-bottom: 3em;
   padding-left: 2em;
