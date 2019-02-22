@@ -1,0 +1,47 @@
+.errorMsg {
+  display: none;
+  background-color: #f3dcdc;
+  border-radius:  3px;
+  border: 1px solid #004f75;
+  color: #c10000;
+  text-align: center;
+  margin-bottom: 5px;
+  height: 2em;
+  line-height: 2em;
+}
+
+.new-tweet {
+  padding: 0.5em;
+  border: 1px solid #3B3D85;
+  background-color: #68798e;
+  border-radius: 5px;
+  display: none;
+
+
+  .new-tweet h2 {
+    border-bottom: 2px solid #3f4e60;
+    line-height: 1em;
+    margin-top: 0;
+  }
+
+  .new-tweet textarea {
+    display: block;
+    width: 100%;
+    resize: vertical;
+  }
+
+  .new-tweet input {
+    margin-top: 0.2em;
+  }
+
+  .new-tweet .counter {
+    float: right;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    font-style: italic;
+  }
+
+  .new-tweet .counter.negative {
+    color: red;
+  }
+}
