@@ -3,6 +3,10 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+$primaryColourLite: #d9e1e8;
+$primaryColourMid:#68798e;
+
 html {
   box-sizing: border-box;
   margin: 0;
@@ -17,8 +21,8 @@ html {
 
 body {
   margin: 0;
-  color: #d9dcde;
-  background-color: #8599b2;
+  color: $primaryColourLite;
+  background-color: $primaryColourMid;
   font-family: 'Roboto Condensed', sans-serif;
 
 
@@ -26,12 +30,9 @@ body {
     width: 55%;
     min-width: 500px;
     max-width: 750px;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 2em;
     margin: auto;
-    background-color: #8fa7c1;
+    background-color: $primaryColourLite;
     margin-top: 80px;
   }
 }

@@ -1,6 +1,11 @@
+$primaryColourDark: #3f4e60;
+$primaryColourMid:#68798e;
+$primaryColourLite: #d9e1e8;
+$errColour: #e2b2b2;
+
 .errorMsg {
   display: none;
-  background-color: #f3dcdc;
+  background-color: $errColour;
   border-radius:  3px;
   border: 1px solid #004f75;
   color: #c10000;
@@ -12,36 +17,39 @@
 
 .new-tweet {
   padding: 0.5em;
-  border: 1px solid #3B3D85;
-  background-color: #68798e;
+  border: 2px solid $primaryColourDark;
+  background-color: $primaryColourMid;
   border-radius: 5px;
   display: none;
 
 
-  .new-tweet h2 {
-    border-bottom: 2px solid #3f4e60;
+  h2 {
+    border-bottom: 2px solid $primaryColourDark;
     line-height: 1em;
     margin-top: 0;
   }
 
-  .new-tweet textarea {
+  textarea {
     display: block;
     width: 100%;
     resize: vertical;
   }
 
-  .new-tweet input {
+  input {
     margin-top: 0.2em;
+    border-radius: 3px;
+    background-color: $primaryColourLite;
+    color: $primaryColourDark;
   }
 
-  .new-tweet .counter {
+  .counter {
     float: right;
     padding-top: 0.5em;
     padding-right: 0.5em;
     font-style: italic;
-  }
 
-  .new-tweet .counter.negative {
-    color: red;
+    .negative {
+      color: $errColour;
+    }
   }
 }

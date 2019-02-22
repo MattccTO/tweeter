@@ -17,20 +17,17 @@ html {
  */
 body {
   margin: 0;
-  color: #d9dcde;
-  background-color: #8599b2;
+  color: #d9e1e8;
+  background-color: #68798e;
   font-family: "Roboto Condensed", sans-serif;
 }
 body main {
   width: 55%;
   min-width: 500px;
   max-width: 750px;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 2em;
   margin: auto;
-  background-color: #8fa7c1;
+  background-color: #d9e1e8;
   margin-top: 80px;
 }
 

@@ -1,6 +1,6 @@
 .errorMsg {
   display: none;
-  background-color: #f3dcdc;
+  background-color: #e2b2b2;
   border-radius: 3px;
   border: 1px solid #004f75;
   color: #c10000;
@@ -12,37 +12,35 @@
 
 .new-tweet {
   padding: 0.5em;
-  border: 1px solid #3B3D85;
+  border: 2px solid #3f4e60;
   background-color: #68798e;
   border-radius: 5px;
   display: none;
 }
-
 .new-tweet h2 {
   border-bottom: 2px solid #3f4e60;
   line-height: 1em;
   margin-top: 0;
 }
-
 .new-tweet textarea {
   display: block;
   width: 100%;
   resize: vertical;
 }
-
 .new-tweet input {
   margin-top: 0.2em;
+  border-radius: 3px;
+  background-color: #d9e1e8;
+  color: #3f4e60;
 }
-
 .new-tweet .counter {
   float: right;
   padding-top: 0.5em;
   padding-right: 0.5em;
   font-style: italic;
 }
-
-.new-tweet .counter.negative {
-  color: red;
+.new-tweet .counter .negative {
+  color: #e2b2b2;
 }
 
 /*# sourceMappingURL=new-tweet.css.map */
